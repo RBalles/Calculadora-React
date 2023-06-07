@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F5DC ;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+/**  Colores  **
+
+.boton-clic {
+    background-color: #1B81EE; /* Azul Claro  
+    background-color: #0c53a0; /* Azul oscuro 
+    background-color: #FE0E85; /* Rosa Claro 
+    background-color: #8d0549; /* Rosa Oscuro 
+    background-color:  #EAB24E; /* Naranja 
+    background-color: #F5F5DC; /* Crema Fondo 
+}
+*/
