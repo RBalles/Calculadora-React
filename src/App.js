@@ -19,12 +19,25 @@ function App() {
 
   
   // ---------> Calcular el resultado <-------- //
+  /*
+    La expresión regular /^\d+(\s*[-+* /]\s*\d+)*$/ se utiliza para verificar si la expresión es válida. Veamos en detalle la expresión regular:
+    /: delimitador de inicio de la expresión regular.
+    ^: coincide con el inicio de la cadena.
+    \d+: coincide con uno o más dígitos (el primer número de la expresión).
+    (\s*[-+* /]\s*\d+)*: es un grupo de coincidencia que se repite cero o más veces, lo que permite múltiples operaciones en la expresión. Aquí está la desglose:
+    \s*: coincide con cero o más espacios en blanco.
+    [-+* /]: coincide con cualquier símbolo de operador válido (-, +, *, /).
+    \s*: coincide con cero o más espacios en blanco.
+    \d+: coincide con uno o más dígitos (el siguiente número en la expresión).
+    $: coincide con el final de la cadena.
+    En resumen, esta expresión regular verifica que la expresión solo contenga números seguidos opcionalmente por operadores y números adicionales, y que no haya múltiples operadores consecutivos.
+  */
 
   const calcularResultado = () => {
-    if (input && input.match(/\d+$/) ) {
+    if (input && input.match(/^\d+(\s*[-+*/]\s*\d+)*$/) ) {
       setInput(evaluate(input.toString()));
     } else {
-      alert('Por favor ingresa al menos dos valores para realizar los cálculos');
+      alert('Por favor ingrese valores y operaciones válidas');
     }
   };
 
